@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selecione a hora"
+                android:textAlignment="center"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title"
+                android:background="@drawable/border"
+                android:id="@+id/frameLayout">
+
+            <com.yarolegovich.discretescrollview.DiscreteScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hello World!"
+                    tools:listitem="@layout/time_item"
+                    android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="De"
+                android:background="#ffffff"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:padding="8dp"
+                app:layout_constraintStart_toStartOf="@+id/frameLayout"
+                android:layout_marginLeft="36dp"
+                android:layout_marginStart="36dp"
+                app:layout_constraintTop_toTopOf="@+id/frameLayout"
+                app:layout_constraintBottom_toTopOf="@+id/frameLayout"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Até"
+                android:background="#ffffff"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+                app:layout_constraintTop_toTopOf="@+id/frameLayout"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
